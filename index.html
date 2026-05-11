@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Webbutvecklingens delar.HTML</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Konsten att skapa en webbsida</title>
+
+  <link rel="Stylesheet" href="sistaj.css">
+</head>
+
+<body>
+  <header>
+    <h1 style="color:rgb(106, 106, 106);">Webbutvecklingens delar</h1>
+  </header>
+  <div class="button-section">
+    <button id="lightBtn">Ljus läge</button>
+    <button id="darkBtn">Mörk läge</button>
+
+    <script>
+    const lightBtn = document.getElementById('lightBtn');
+    const darkBtn = document.getElementById('darkBtn');
+    const image = document.getElementById('myImage');
+
+    lightBtn.addEventListener('click', function () {
+        document.body.style.backgroundColor = '#ffffff';
+        image.src = 'pic_bulbon.gif';
+      });
+
+    darkBtn.addEventListener('click', function () {
+        document.body.style.backgroundColor = '#232323';
+        image.src = 'pic_bulboff.gif';
+      }); 
+    </script>
+
+
+    <div class="container">
+      <div>
+        <h2>HTML</h2>
+        <h2>CSS</h2>
+        <h2>Javascript</h2>
+        <img id="myImage" src="htmlcssandjavasc.jpg" alt="Beskrivning av bilden" width="200">
+      </div>
+    </div>
+    
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <p>HTML länkar</p>
+          <li><a href="https://www.exsitec.se/artiklar/vad-ar-html">Fakta</a></li>
+          <li><a href="https://www.w3schools.com/html/default.asp">Strukturering</a></li>
+          <li><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Youtube</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        
+        <h1>HTML</h1>
+        <p class="p1">HTML står för HyperText Markup Language. HTML är som strukturen för en webb sida som skelettet. Man startar alltid ett HTML-dokument med att skriva &lt;!DOCTYPE
+          html&gt;. Det är en instruktion till webbläsaren som talar om att det är en modern webbsida som ska visas.</p>
+        <p class="p1">En annan viktig del är taggen &lt;html lang="sv"&gt;. Den talar om vilket språk webbsidan är skriven på. Om
+          man vill ha en engelsk sida ändrar man "sv" till "en", och det finns liknande koder för alla andra språk.</p>
+        <p class="p1">För att få fram text på sidan använder man olika taggar. Två av de vanligaste är:
+          &lt;h1&gt;: Används för att skapa en huvudrubrik. Den kan placeras högst upp eller där man behöver en tydlig
+          rubrik.
+          &lt;p&gt;: Används för vanlig text (paragrafer).</p>
+        <p class="p1">När man skriver HTML använder man alltid tecknen (<) och (>) (vinkelparenteser) för att skapa taggar. De
+         flesta taggar behöver också en sluttagg, till exempel &lt;/h1&gt;, för att berätta för webbläsaren var
+        rubriken slutar.</p>
+        <p class="p1">För att verkligen förstå hur en webbsida är uppbyggd behöver man ha koll på några specifika taggar här är några andra exempe och hur de fungerar:</p>
+        <p class="p1">&lt;head&gt;: Det här är sidans "hjärna". Allt som skrivs här inne syns inte för besökaren (förutom titeln i fliken), men det är här vi laddar in typsnitt, länkar till CSS och berättar för Google vad sidan handlar om.</p>
+        <p class="p1">&lt;meta charset="UTF-8"&gt;: Detta är en av de viktigaste raderna i head. Den talar om för webbläsaren att vi använder teckenstandarden UTF-8, vilket gör att svenska tecken som å, ä och ö visas på rätt sätt och inte som konstiga symboler.</p>
+        <p class="p1">&lt;style&gt;: Om man inte vill använda en separat fil kan man skriva sin CSS direkt här inne. Det är smidigt för små sidor, men blir rörigt på stora projekt som den som jag jobbar med nu. Oftast så brukar man att göra css/style i en separat fil.</p>
+        <p class="p1">&lt;body&gt;: Detta är själva kroppen på sidan. Allt du ser från text, bilder, knappar och videor/länkar måste ligga inuti denna tagg för att visas i hemsidan.</p>
+        <p class="p1">&lt;div&gt;: En "division" eller box. Det är en osynlig behållare som vi använder för att gruppera ihop saker så att vi kan flytta runt dem eller färglägga dem med CSS. Div har jag använr för att organisera min hemsida och dela upp den på att bar sätt.</p>
+        <p class="p1">&lt;span&gt;: Liknar en div, men används oftast inuti en textrad om man vill styla ett enstaka ord, till exempel göra just det ordet rött eller fetstilt.</p>
+      </div>
+      <div class="sidebar">
+        <p>Vad är HTML?</p>
+        <P>Hur startar man en HTML?</P>
+        <p>Hur kan man få fram text i Html?</p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <p>CSS länkar</p>
+          <li><a href="https://www.exsitec.se/artiklar/vad-ar-css">Fakta</a></li>
+          <li><a href="https://www.w3schools.com/css/default.asp">Designsystem</a></li>
+          <li><a href="https://www.youtube.com/watch?v=qz0aGYrrlhU">Youtube</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <h1>CSS</h1>
+        <p class="p1">CSS står för CascadingStyle Sheets. Om HTML är skelettet/strukturen som håller upp innehållet, så är CSS webbens
+          kläder och design för att göar webben finare. Det är det som gör att hemsidan ser proffsig ut. Med CSS kan man bestämma allt ifrån färger och
+          typsnitt till hur stora bilder ska vara och var på sidan de ska ligga.</p>
+        <p class="p1">Man börjar med att skriva "regler" för hur olika delar av HTML-koden ska se ut. En regel består av en
+          selector (vad du vill ändra) och en declaration (vad ändringen ska vara).</p>
+        <p class="p1">Till exempel, om du vill att alla dina rubriker (&lt;h1&gt;) ska vara blå, skriver man: h1 { color: blue; }
+        </p>
+        <p class="p1">Det finns tre sätt, men det absolut vanligaste och bästa sättet är att länka en separat CSS-fil till din
+          HTML-fil.</p>
+        <p class="p1">Skapa en fil som heter style.css.</p>
+        <p class="p1">I din HTML-fil, inuti &lt;head&gt;-taggen, lägger du till denna rad: &lt;link rel="stylesheet"
+          href="style.css"&gt;</p>
+        <p class="p1">Att separera HTML och CSS är en av de viktigaste grundpelarna inom modern webbutveckling</p>
+        <p class="p1">Här är varför vi håller isär dem och vilka fördelar det ger.</p>
+        <p class="p1">1. Genom att dela upp koden får varje del ett tydligt syfte:</p>
+        <p class="p1">HTML (Struktur): Definierar vad innehållet är (rubriker, stycken, listor).</p>
+        <p class="p1">CSS (Presentation): Definierar hur innehållet ska se ut (färger, typsnitt, placering).</p>
+        <p class="p1">2. Enklare underhåll: Om du vill ändra utseendet på hela din webbplats behöver du bara redigera en enda CSS-fil istället för att gå in i varje enskild HTML-sida. Detta sparar tid och minskar risken för fel.</p>
+        <p class="p1">3. Snabbare laddningstider: Webbläsaren sparar CSS-filen lokalt (cache). När en besökare går mellan olika sidor på din webbplats behöver bara det nya innehållet laddas, vilket gör att sidan upplevs som snabbare.</p>
+        <p class="p1">4. Renare kod: Genom att flytta bort all designkod från HTML-filerna blir de mycket mer lättlästa och strukturerade, vilket gör det enklare för både dig och andra utvecklare att samarbeta i projektet.</p>
+      </div>
+      <div class="sidebar">
+        <p>Vad är CSS?</p>
+        <p>Hur börjar man med css?</p>
+        <p>Hur kan man kombinera CSS med HTML?</p>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <p>JavaScript länkar</p>
+          <li><a href="https://www.evidi.com/se/teknologiordbok/javascript">Fakta</a></li>
+          <li><a href="http://w3schools.com/js/default.asp">Funktionalitet</a></li>
+        </ul>
+      </nav>
+      <div class="content">
+        <h1>JavaScript</h1>
+        <p class="p1">Vi vet att HTML är skelettet för en hemsida och att CSS är webbens kläder/design då är Javascript som hjärnan och musklerna, de lägger till extra funktioner som dark mode och light mode. </p>
+        <p class="p1">Medan HTML definierar innehållet och CSS stilen, gör JavaScript webbsidan interaktiv. Det är ett
+          programmeringsspråk som körs direkt i webbläsaren hos den som besöker sidan.</p>
+        <p class="p1">JavaScript fungerar genom att webbläsaren läser din kod och omvandlar den till instruktioner som datorn kan utföra direkt på din skärm. Man brukar säga att JavaScript är ett tolkat språk, vilket innebär att man kan fatta språket enkelt.</p>
+        <p class="p1">Java och JavaScript är två populära programmeringsspråk som ofta blandas ihop eftersom deras namn liknar varandra. Trots det fungerar de på olika sätt och används till olika saker inom programmering.</p>
+        <p class="p1">Java är ett kraftfullt programmeringsspråk som används för att skapa stora program, appar och system. Det används ofta inom företag, banker och Android-appar. Java är känt för att vara stabilt och säkert, vilket gör att många stora företag använder det i sina system. När man programmerar i Java behöver man skriva ganska tydlig och strukturerad kod.</p>
+        <p class="p1">JavaScript används främst på webbsidor för att göra dem interaktiva och levande. Med JavaScript kan man till exempel skapa knappar som reagerar när man klickar på dem, animationer och spel i webbläsaren. Nästan alla moderna hemsidor använder JavaScript på något sätt. Språket är enklare att börja med för många nybörjare eftersom man snabbt kan se resultat direkt i en webbläsare.</p>
+
+      </div>
+      <div class="sidebar">
+        <p>Vad är Javascript?</p>
+        <p>Hur fungerar Javascript?</p>
+        <p>Vad är skillnaden mellan java och javascript?</p>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <div class="container">
+  <div>Webb sida är gjord av Anas yaseen åk1 i gymnasiet. Sensat ändrad 2026</div>
+  </div>
+</footer>
+
+</body>
+</html>
