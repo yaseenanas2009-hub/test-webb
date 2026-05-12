@@ -1,4 +1,4 @@
-body {
+xbody {
     background-color: #ffffff;
     font-family: sans-serif;
     margin: 20px;
@@ -14,7 +14,7 @@ body {
 }
 
 .container > * {
-    border: 1px solid #ff0000;
+    border: 1px solid #1E90FF;
     background-color: #f5f5dc07;
     padding: 15px;
     grid-column: col-start / span 12;
@@ -76,12 +76,12 @@ p {
 }
 
 h1 {
-  color: #cf1a1a;
+  color: #1E90FF;
   text-align: center;
 }
 
 h2 {
-  color: #e56161;
+  color: #71b8fe;
   text-align: center;
 }
 
