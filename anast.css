@@ -75,7 +75,8 @@ img {
 
 p {
   color: #838080;
-  text-align: center;
+  text-align: left;
+  font-size: 17px;
 }
 
 h1 {
